@@ -1,0 +1,91 @@
+"use client";
+
+import { useGSAP } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
+import { useRef } from "react";
+import { Code2, Globe, Rocket, Zap } from "lucide-react";
+import SpotlightCard from "@/components/SpotlightCard";
+
+export default function About() {
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(".bento-item", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power3.out",
+    });
+  }, { scope: containerRef });
+
+  return (
+    <section id="about" ref={containerRef} className="py-32 relative">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            More than just code. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">I build digital assets.</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Main Bio Card - Spans 2 columns */}
+          <SpotlightCard className="md:col-span-2 p-8">
+            <h3 className="text-2xl font-bold mb-4 text-white">The Developer</h3>
+            <p className="text-gray-400 mb-8 leading-relaxed">
+              I&apos;m a Full Stack Developer with a passion for building beautiful, functional, and scalable web applications. 
+              My journey started with a curiosity for how things work, and it has evolved into a career of crafting digital experiences.
+            </p>
+          </SpotlightCard>
+
+          {/* Stats Card */}
+          <SpotlightCard className="p-8 flex flex-col justify-center items-center text-center group">
+            <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">3+</div>
+            <p className="text-gray-400 font-medium">Years Experience</p>
+          </SpotlightCard>
+
+          {/* Tech Stack Card */}
+          <SpotlightCard className="p-8">
+            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 text-zinc-200">
+              <Code2 size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-white">Tech Stack</h3>
+            <p className="text-gray-400">WordPress & Next.js Specialist</p>
+          </SpotlightCard>
+
+          {/* Location Card */}
+          <SpotlightCard className="p-8 flex flex-col justify-center items-center text-center">
+             <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4 text-orange-400">
+               <Globe size={24} />
+             </div>
+             <h3 className="text-xl font-bold mb-2 text-white">Location</h3>
+             <p className="text-gray-400">Remote / Worldwide</p>
+          </SpotlightCard>
+
+          {/* Performance Card */}
+          <SpotlightCard className="p-8">
+            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 text-purple-400">
+              <Zap size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-white">Performance</h3>
+            <p className="text-gray-400">Fast, Mobile-First, SEO Friendly</p>
+          </SpotlightCard>
+
+          {/* Strategy Card */}
+          <SpotlightCard className="p-8">
+            <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 text-green-400">
+              <Rocket size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-white">Strategy</h3>
+            <p className="text-gray-400">Conversion-Focused Design</p>
+          </SpotlightCard>
+        </div>
+      </div>
+    </section>
+  );
+}
