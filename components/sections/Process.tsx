@@ -10,18 +10,18 @@ gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     number: "01",
-    title: "AI-Powered Strategy",
-    description: "We use data-driven AI tools to analyze your market and define the most efficient path to success.",
+    title: "Strategic Planning",
+    description: "We analyze your market and define the most efficient path to success.",
   },
   {
     number: "02",
-    title: "Generative Design",
-    description: "Rapid iteration using generative AI to explore multiple design directions in record time.",
+    title: "Rapid Prototyping",
+    description: "Exploring multiple design directions quickly to find the perfect fit.",
   },
   {
     number: "03",
-    title: "Accelerated Dev",
-    description: "Coding with AI copilots to write clean, bug-free code at unprecedented speeds.",
+    title: "Efficient Development",
+    description: "Using modern tools and AI copilots to write clean code at unprecedented speeds.",
   },
   {
     number: "04",

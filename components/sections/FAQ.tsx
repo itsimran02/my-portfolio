@@ -3,24 +3,36 @@
 import { useState, useRef } from "react";
 import { useGSAP } from "@/lib/gsap";
 import { gsap } from "@/lib/gsap";
-import { Plus, Minus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 const faqs = [
   {
-    question: "Does using AI mean my website will look generic?",
-    answer: "Absolutely not. I use AI as a power tool for coding and logic, but the creative direction, design system, and user experience are custom-crafted for your brand. You get bespoke design with the speed of AI execution.",
+    question: "What is your typical project timeline?",
+    answer: "Timelines vary by project scope. A simple landing page might take 1-2 weeks, while a full-stack web application could take 4-8 weeks. I provide a detailed timeline during our initial consultation.",
   },
   {
-    question: "Is my data and intellectual property safe?",
-    answer: "Yes. I use enterprise-grade, private AI instances where your data is not used for training. You retain 100% ownership of all code, assets, and intellectual property delivered.",
+    question: "Do you work with early-stage startups?",
+    answer: "Yes, I specialize in helping startups go from zero to one. I can assist with MVP development, technical architecture, and scaling strategies to get your product to market quickly.",
   },
   {
-    question: "How much faster is your process compared to agencies?",
-    answer: "By automating repetitive coding tasks and leveraging AI for rapid prototyping, I typically deliver projects 50-70% faster than traditional agencies, saving you weeks or even months of development time.",
+    question: "What are your payment terms?",
+    answer: "Typically, I work with a 50% deposit to start the project and the remaining 50% upon completion and launch. For larger, long-term projects, we can discuss milestone-based payments.",
   },
   {
-    question: "What if I need complex custom features?",
-    answer: "AI excels at complex logic. Whether it's a custom booking system, a SaaS dashboard, or an intricate animation, I can implement sophisticated features faster and with fewer bugs than manual coding.",
+    question: "Can you audit my existing codebase?",
+    answer: "Absolutely. I can perform a comprehensive audit of your current codebase to identify performance bottlenecks, security vulnerabilities, and areas for refactoring or modernization.",
+  },
+  {
+    question: "Do you provide ongoing support?",
+    answer: "Yes, I offer post-launch support packages to ensure your website remains secure, up-to-date, and performing optimally. We can discuss a plan that fits your needs.",
+  },
+  {
+    question: "What is your design process like?",
+    answer: "I start with a discovery phase to understand your brand and goals. Then, I move to wireframing and high-fidelity design. Once approved, I build the site using modern best practices.",
+  },
+  {
+    question: "Can you help with SEO?",
+    answer: "Absolutely. I build all websites with SEO best practices in mind, including semantic HTML, fast load times, and mobile responsiveness. I can also help with metadata and content strategy.",
   },
 ];
 
@@ -34,7 +46,7 @@ export default function FAQ() {
         trigger: containerRef.current,
         start: "top 80%",
       },
-      y: 30,
+      y: 20,
       opacity: 0,
       duration: 0.8,
       stagger: 0.1,
@@ -45,37 +57,37 @@ export default function FAQ() {
   return (
     <section id="faq" ref={containerRef} className="py-32 relative">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Common Questions</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Understanding how AI-native development benefits your business.
+        <div className="mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Common Questions</h2>
+          <p className="text-gray-400 max-w-xl text-xl">
+            Everything you need to know about the process.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto flex flex-col gap-4">
+        <div className="max-w-4xl mx-auto">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="faq-item glass-card border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/20"
+              className="faq-item border-b border-white/10 group"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between py-8 text-left cursor-pointer"
               >
-                <span className="text-lg md:text-xl font-medium text-white pr-8">
+                <span className={`text-xl md:text-2xl font-medium transition-colors duration-300 ${openIndex === index ? "text-white" : "text-zinc-400 group-hover:text-white"}`}>
                   {faq.question}
                 </span>
-                <div className={`p-2 rounded-full bg-white/5 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}>
-                  {openIndex === index ? <Minus size={20} /> : <Plus size={20} />}
+                <div className={`relative flex items-center justify-center w-8 h-8 transition-transform duration-500 ${openIndex === index ? "rotate-45" : "group-hover:rotate-90"}`}>
+                  <Plus size={24} className={`transition-colors duration-300 ${openIndex === index ? "text-white" : "text-zinc-500 group-hover:text-white"}`} />
                 </div>
               </button>
               
               <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  openIndex === index ? "max-h-[300px] opacity-100 mb-8" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="p-6 pt-0 text-gray-400 leading-relaxed">
+                <div className="text-gray-400 leading-relaxed text-lg max-w-2xl">
                   {faq.answer}
                 </div>
               </div>

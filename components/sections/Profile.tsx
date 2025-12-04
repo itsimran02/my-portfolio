@@ -100,7 +100,7 @@ export default function Profile() {
                   Creative Technologist
                 </div>
                 <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300">
-                  Efficiency Expert
+                  Full Stack Developer
                 </div>
               </div>
             </div>

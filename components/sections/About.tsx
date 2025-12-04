@@ -3,7 +3,7 @@
 import { useGSAP } from "@/lib/gsap";
 import { gsap } from "@/lib/gsap";
 import { useRef } from "react";
-import { Code2, Globe, Rocket, Zap } from "lucide-react";
+import { Cpu, Activity, GitBranch } from "lucide-react";
 import SpotlightCard from "@/components/SpotlightCard";
 
 export default function About() {
@@ -50,36 +50,27 @@ export default function About() {
           </SpotlightCard>
 
           {/* Tech Stack Card */}
-          <SpotlightCard className="p-8">
-            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 text-zinc-200">
-              <Code2 size={24} />
+          <SpotlightCard className="p-8 group">
+            <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4 text-blue-400 group-hover:text-blue-300 group-hover:bg-blue-500/20 transition-all duration-300">
+              <Cpu size={24} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-white">Tech Stack</h3>
             <p className="text-gray-400">WordPress & Next.js Specialist</p>
           </SpotlightCard>
 
-          {/* Location Card */}
-          <SpotlightCard className="p-8 flex flex-col justify-center items-center text-center">
-             <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4 text-orange-400">
-               <Globe size={24} />
-             </div>
-             <h3 className="text-xl font-bold mb-2 text-white">Location</h3>
-             <p className="text-gray-400">Remote / Worldwide</p>
-          </SpotlightCard>
-
           {/* Performance Card */}
-          <SpotlightCard className="p-8">
-            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 text-purple-400">
-              <Zap size={24} />
+          <SpotlightCard className="p-8 group">
+            <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4 text-purple-400 group-hover:text-purple-300 group-hover:bg-purple-500/20 transition-all duration-300">
+              <Activity size={24} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-white">Performance</h3>
             <p className="text-gray-400">Fast, Mobile-First, SEO Friendly</p>
           </SpotlightCard>
 
           {/* Strategy Card */}
-          <SpotlightCard className="p-8">
-            <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 text-green-400">
-              <Rocket size={24} />
+          <SpotlightCard className="p-8 group">
+            <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-4 text-emerald-400 group-hover:text-emerald-300 group-hover:bg-emerald-500/20 transition-all duration-300">
+              <GitBranch size={24} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-white">Strategy</h3>
             <p className="text-gray-400">Conversion-Focused Design</p>

@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Imran | AI-Native Full Stack Developer",
-  description: "Portfolio of Imran, a Full Stack Developer specializing in AI-native web applications, Next.js, and modern UI/UX design.",
-  keywords: ["Full Stack Developer", "AI Native", "Next.js", "React", "Web Development", "Portfolio"],
+  title: "Imran | Full Stack Developer & WordPress Expert",
+  description: "Portfolio of Imran, a Full Stack Developer specializing in MERN Stack, WordPress, and high-performance web applications.",
+  keywords: ["Full Stack Developer", "MERN Stack", "WordPress", "Next.js", "React", "Web Development", "Portfolio"],
 };
 
 export default function RootLayout({

@@ -53,13 +53,13 @@ export default function Hero() {
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-8 tracking-tight mix-blend-overlay text-white">
-            <TextScramble duration={1500}>Crafting digital</TextScramble> <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">experiences</span> that matter.
+            <TextScramble duration={1500}>Full Stack</TextScramble> <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Developer</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl leading-relaxed">
-            I build premium digital experiences at <span className="text-white font-semibold">AI speed</span>. 
-            Leveraging next-gen tools to reduce costs and delivery times without compromising quality.
+            Specializing in <span className="text-white font-semibold">MERN Stack</span> & <span className="text-white font-semibold">WordPress</span>.
+            I leverage AI tools to accelerate development, reducing costs and delivery times without compromising quality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6">

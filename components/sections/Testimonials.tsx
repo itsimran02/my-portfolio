@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: "Sarah Jenkins",
     role: "CEO, TechStart",
-    quote: "Working with [Name] was a game-changer. Our new site is faster, looks amazing, and our conversion rate has doubled.",
+    quote: "Working with imran was a game-changer. Our new site is faster, looks amazing, and our conversion rate has doubled.",
   },
   {
     name: "Michael Chen",

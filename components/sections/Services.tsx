@@ -8,23 +8,23 @@ import { ArrowUpRight } from "lucide-react";
 const services = [
   {
     id: "01",
-    title: "AI-Enhanced Development",
-    description: "Using AI code assistants to build robust applications 50% faster than traditional methods.",
+    title: "MERN Stack Development",
+    description: "Scalable full-stack applications using MongoDB, Express, React, and Node.js.",
   },
   {
     id: "02",
-    title: "Next.js Web Apps",
-    description: "Scalable, high-performance web applications built with modern, AI-optimized workflows.",
+    title: "WordPress Solutions",
+    description: "Custom themes and plugins tailored to your specific business needs.",
   },
   {
     id: "03",
-    title: "Automated Systems",
-    description: "Integrating AI agents to automate your business processes and customer interactions.",
+    title: "Next.js Web Apps",
+    description: "High-performance, SEO-friendly web applications with modern architecture.",
   },
   {
     id: "04",
-    title: "Rapid Prototyping",
-    description: "From concept to functional MVP in days, not months, using generative design tools.",
+    title: "AI-Accelerated Workflow",
+    description: "Leveraging AI tools to speed up coding and testing, saving you time and budget.",
   },
 ];
 
