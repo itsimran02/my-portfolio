@@ -87,8 +87,8 @@ export default function Profile() {
                 I bridge the gap between aesthetics and functionality.
               </p>
               <p className="text-gray-400 leading-relaxed mb-8">
-                My philosophy is simple: **Make it beautiful, make it fast, make it work.** 
-                I leverage **AI agents and LLMs** to multiply my output, allowing me to deliver 
+                My philosophy is simple: Make it beautiful, make it fast, make it work.
+                I leverage AI agents and LLMs to multiply my output, allowing me to deliver 
                 enterprise-grade solutions at a fraction of the traditional time and cost.
               </p>
               
