@@ -9,6 +9,15 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
+    title: "Sahara Turf",
+    category: "Online Turf Booking Platform",
+    description: "A high-performance online booking platform for sports turfs, featuring real-time availability slots, automated hold expirations, and secure payment integrations.",
+    color: "from-emerald-600 to-green-600",
+    year: "2024",
+    link: "https://saharaturf.com",
+    image: "/assets/turf-img.png"
+  },
+  {
     title: "YumLabs",
     category: "Modern Business Website",
     description: "A comprehensive food delivery application featuring real-time tracking, restaurant management, and seamless payments.",
@@ -16,15 +25,6 @@ const projects = [
     year: "2024",
     link: "https://yumlabs.vercel.app/",
     image: "/assets/yumlabs.png"
-  },
-  {
-    title: "MERN E-Commerce",
-    category: "Full Stack Shop",
-    description: "A scalable e-commerce solution built with the MERN stack, featuring user authentication, cart management, and admin dashboard.",
-    color: "from-blue-600 to-cyan-600",
-    year: "2024",
-    link: "https://mern-ecom-38x1.vercel.app/shop/home",
-    image: "/assets/ecom.png"
   },
   {
     title: "Renovation Business",
