@@ -3,28 +3,37 @@
 import { useGSAP } from "@/lib/gsap";
 import { gsap } from "@/lib/gsap";
 import { useRef } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Layers, Globe, Terminal, Cpu } from "lucide-react";
+import SpotlightCard from "@/components/SpotlightCard";
 
 const services = [
   {
     id: "01",
     title: "MERN Stack Development",
     description: "Scalable full-stack applications using MongoDB, Express, React, and Node.js.",
+    icon: Layers,
+    color: "rgba(59, 130, 246, 0.15)", // Blue glow
   },
   {
     id: "02",
     title: "WordPress Solutions",
     description: "Custom themes and plugins tailored to your specific business needs.",
+    icon: Globe,
+    color: "rgba(16, 185, 129, 0.15)", // Emerald/Green glow
   },
   {
     id: "03",
     title: "Next.js Web Apps",
     description: "High-performance, SEO-friendly web applications with modern architecture.",
+    icon: Terminal,
+    color: "rgba(139, 92, 246, 0.15)", // Purple glow
   },
   {
     id: "04",
     title: "AI-Accelerated Workflow",
     description: "Leveraging AI tools to speed up coding and testing, saving you time and budget.",
+    icon: Cpu,
+    color: "rgba(236, 72, 153, 0.15)", // Pink glow
   },
 ];
 
@@ -32,7 +41,7 @@ export default function Services() {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    gsap.from(".service-item", {
+    gsap.from(".service-card", {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 80%",
@@ -40,7 +49,7 @@ export default function Services() {
       y: 50,
       opacity: 0,
       duration: 1,
-      stagger: 0.1,
+      stagger: 0.15,
       ease: "power3.out",
     });
   }, { scope: containerRef });
@@ -53,30 +62,37 @@ export default function Services() {
           <div className="h-px w-full bg-white/10" />
         </div>
 
-        <div className="flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service) => (
-            <div
+            <SpotlightCard
               key={service.id}
-              className="service-item group relative border-b border-white/10 py-12 cursor-pointer"
+              className="service-card p-8 md:p-10 group"
+              spotlightColor={service.color}
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 px-4">
-                <div className="flex items-baseline gap-8">
+              <div className="flex flex-col h-full justify-between gap-8">
+                <div className="flex items-start justify-between">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 group-hover:text-white group-hover:bg-white/10 transition-all duration-300">
+                    <service.icon size={24} />
+                  </div>
                   <span className="text-sm font-mono text-gray-500">/{service.id}</span>
-                  <h3 className="text-3xl md:text-5xl font-bold text-gray-400 group-hover:text-white transition-colors duration-300">
-                    {service.title}
-                  </h3>
                 </div>
                 
-                <div className="flex items-center gap-8 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-10 group-hover:translate-x-0">
-                  <p className="text-sm text-gray-400 max-w-xs hidden md:block">
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white group-hover:text-white/95 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-base">
                     {service.description}
                   </p>
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
-                    <ArrowUpRight size={20} />
+                </div>
+                
+                <div className="flex items-center justify-end mt-4">
+                  <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 group-hover:border-white/30 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                    <ArrowUpRight size={18} />
                   </div>
                 </div>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

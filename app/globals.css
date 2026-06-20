@@ -43,15 +43,29 @@ body {
 
 /* Glassmorphism Utilities */
 .glass-card {
-  background: rgba(23, 23, 23, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  border: none !important; /* Override standard border */
 }
 
-.glass-card:hover {
-  background: rgba(23, 23, 23, 0.6);
-  border-color: rgba(255, 255, 255, 0.1);
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+
+.glass-card:hover::before {
+  background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.45), rgba(6, 182, 212, 0.2));
 }
 
 /* Noise Texture */
@@ -79,16 +93,25 @@ body {
 
 .aurora-blob {
   position: absolute;
-  filter: blur(80px);
-  opacity: 0.3;
+  filter: blur(120px);
+  opacity: 0.35;
   border-radius: 50%;
-  animation: float 10s infinite ease-in-out;
+  animation: drift 20s infinite ease-in-out;
 }
 
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
+/* Animation Delay Utilities */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes drift {
+  0% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  33% { transform: translate(50px, -40px) scale(1.15) rotate(120deg); }
+  66% { transform: translate(-30px, 30px) scale(0.9) rotate(240deg); }
+  100% { transform: translate(0px, 0px) scale(1) rotate(360deg); }
 }
 
 @keyframes marquee {

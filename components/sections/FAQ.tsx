@@ -64,30 +64,30 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto flex flex-col gap-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="faq-item border-b border-white/10 group"
+              className="faq-item glass-card rounded-2xl overflow-hidden transition-all duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between py-8 text-left cursor-pointer"
+                className="w-full flex items-center justify-between px-8 py-6 text-left cursor-pointer select-none"
               >
-                <span className={`text-xl md:text-2xl font-medium transition-colors duration-300 ${openIndex === index ? "text-white" : "text-zinc-400 group-hover:text-white"}`}>
+                <span className={`text-lg md:text-xl font-semibold transition-colors duration-300 ${openIndex === index ? "text-white" : "text-gray-300 group-hover:text-white"}`}>
                   {faq.question}
                 </span>
-                <div className={`relative flex items-center justify-center w-8 h-8 transition-transform duration-500 ${openIndex === index ? "rotate-45" : "group-hover:rotate-90"}`}>
-                  <Plus size={24} className={`transition-colors duration-300 ${openIndex === index ? "text-white" : "text-zinc-500 group-hover:text-white"}`} />
+                <div className={`relative flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 transition-all duration-500 ${openIndex === index ? "rotate-45 bg-white text-black" : "group-hover:rotate-90"}`}>
+                  <Plus size={18} className={`transition-colors duration-300 ${openIndex === index ? "text-black" : "text-gray-400"}`} />
                 </div>
               </button>
               
               <div
                 className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  openIndex === index ? "max-h-[300px] opacity-100 mb-8" : "max-h-0 opacity-0"
+                  openIndex === index ? "max-h-[300px] opacity-100 px-8 pb-6" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="text-gray-400 leading-relaxed text-lg max-w-2xl">
+                <div className="text-gray-400 leading-relaxed text-base max-w-3xl border-t border-white/5 pt-4">
                   {faq.answer}
                 </div>
               </div>

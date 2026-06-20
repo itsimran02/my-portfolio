@@ -70,14 +70,14 @@ export default function Contact() {
           {/* Right Column: Contact Form */}
           <div className="contact-content glass-card p-8 md:p-10 rounded-3xl border border-white/10">
             <form className="flex flex-col gap-6">
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="name" className="text-sm font-medium text-gray-400">Name</label>
                   <input 
                     type="text" 
                     id="name" 
                     placeholder="John Doe"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:bg-white/10 focus:border-blue-500/80 focus:ring-4 focus:ring-blue-500/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -86,7 +86,7 @@ export default function Contact() {
                     type="email" 
                     id="email" 
                     placeholder="john@company.com"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:bg-white/10 focus:border-blue-500/80 focus:ring-4 focus:ring-blue-500/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
                   />
                 </div>
               </div>
@@ -95,11 +95,11 @@ export default function Contact() {
                 <label htmlFor="subject" className="text-sm font-medium text-gray-400">Subject</label>
                 <select 
                   id="subject" 
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500/50 transition-colors appearance-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:bg-white/10 focus:border-blue-500/80 focus:ring-4 focus:ring-blue-500/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer"
                 >
-                  <option className="bg-black">Project Inquiry</option>
-                  <option className="bg-black">General Question</option>
-                  <option className="bg-black">Partnership</option>
+                  <option className="bg-neutral-900">Project Inquiry</option>
+                  <option className="bg-neutral-900">General Question</option>
+                  <option className="bg-neutral-900">Partnership</option>
                 </select>
               </div>
 
@@ -109,13 +109,13 @@ export default function Contact() {
                   id="message" 
                   rows={4}
                   placeholder="Tell me about your project..."
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500/50 transition-colors resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:bg-white/10 focus:border-blue-500/80 focus:ring-4 focus:ring-blue-500/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 resize-none"
                 />
               </div>
 
               <button 
                 type="submit"
-                className="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:opacity-90 transition-opacity mt-2"
+                className="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl shadow-lg shadow-blue-500/10 hover:shadow-blue-500/25 hover:-translate-y-0.5 transition-all active:translate-y-0 duration-300 mt-2 cursor-pointer"
               >
                 Send Message
               </button>
