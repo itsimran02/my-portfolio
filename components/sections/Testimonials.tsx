@@ -4,24 +4,24 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Jenkins",
-    role: "CEO, TechStart",
-    quote: "Working with this team was a game-changer. Our new site is faster, looks amazing, and our conversion rate has doubled.",
+    name: "Feroz Bhai",
+    role: "Owner, Sahara Turf",
+    quote: "The booking platform they built for Sahara Turf is incredible. Real-time slot booking, automated locks, and payment features saved our daily management hassle completely.",
   },
   {
-    name: "Michael Chen",
-    role: "Founder, Studio 54",
-    quote: "Professional, reliable, and incredibly talented. They understood our vision perfectly and executed it better than we imagined.",
+    name: "Amit Sharma",
+    role: "Founder, Hoppa Sweden",
+    quote: "Superb execution on our custom Shopify storefront. The site is incredibly fast, conversions have surged, and the mobile experience is extremely smooth.",
   },
   {
-    name: "Jessica Lee",
-    role: "Marketing Director, GrowthCo",
-    quote: "The attention to detail is unmatched. Every animation and interaction feels polished. Highly recommend!",
+    name: "Priya Sen",
+    role: "Co-Founder, Nirmalaya",
+    quote: "They brought Nirmalaya's eco-friendly brand vision to life with a stunning Shopify design. Every animation and interaction feels highly polished.",
   },
   {
-    name: "David Ross",
-    role: "Product Manager, Apex",
-    quote: "Delivered on time and exceeded expectations. The code quality is top-notch and easy to maintain.",
+    name: "Rajesh Patel",
+    role: "CTO, Digiverse India",
+    quote: "Their full-stack Next.js and custom theme skills are top-notch. Clean architecture, lightning-fast performance, and a highly reliable team.",
   },
 ];
 

@@ -51,6 +51,7 @@ function ProjectCard({
   index: number;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const linkRef = useRef<HTMLAnchorElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -69,8 +70,47 @@ function ProjectCard({
     amber: "rgba(245, 158, 11, 0.15)",
   };
 
+  // Per-card scroll animation
+  useGSAP(
+    () => {
+      if (!linkRef.current) return;
+
+      gsap.set(linkRef.current, { y: 80, opacity: 0 });
+
+      gsap.to(linkRef.current, {
+        scrollTrigger: {
+          trigger: linkRef.current,
+          start: "top 90%",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+
+      // Image parallax
+      const img = linkRef.current.querySelector(".project-img") as HTMLElement;
+      if (img) {
+        gsap.fromTo(
+          img,
+          { yPercent: -6 },
+          {
+            scrollTrigger: {
+              trigger: linkRef.current,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+            yPercent: 6,
+          }
+        );
+      }
+    },
+    { scope: linkRef }
+  );
+
   return (
-    <Link href={project.link} target="_blank" className="project-card group block">
+    <Link href={project.link} target="_blank" ref={linkRef} className="project-card group block">
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -160,40 +200,18 @@ export default function Projects() {
 
   useGSAP(
     () => {
-      // Set initial state
-      gsap.set(".project-card", { y: 60, opacity: 0 });
+      // Heading animation
+      gsap.set(".projects-heading", { y: 40, opacity: 0 });
 
-      const cards = gsap.utils.toArray<HTMLElement>(".project-card");
-
-      cards.forEach((card) => {
-        gsap.to(card, {
-          scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-          },
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-        });
-
-        // Parallax on the image
-        const img = card.querySelector(".project-img") as HTMLElement;
-        if (img) {
-          gsap.fromTo(
-            img,
-            { yPercent: -5 },
-            {
-              scrollTrigger: {
-                trigger: card,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-              },
-              yPercent: 5,
-            }
-          );
-        }
+      gsap.to(".projects-heading", {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out",
       });
     },
     { scope: containerRef }
@@ -203,7 +221,7 @@ export default function Projects() {
     <section id="projects" ref={containerRef} className="py-32 relative">
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="mb-20 flex items-end justify-between">
+        <div className="projects-heading mb-20 flex items-end justify-between">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Selected Work
