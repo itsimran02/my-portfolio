@@ -6,12 +6,12 @@ const testimonials = [
   {
     name: "Sarah Jenkins",
     role: "CEO, TechStart",
-    quote: "Working with imran was a game-changer. Our new site is faster, looks amazing, and our conversion rate has doubled.",
+    quote: "Working with this team was a game-changer. Our new site is faster, looks amazing, and our conversion rate has doubled.",
   },
   {
     name: "Michael Chen",
     role: "Founder, Studio 54",
-    quote: "Professional, reliable, and incredibly talented. He understood our vision perfectly and executed it better than we imagined.",
+    quote: "Professional, reliable, and incredibly talented. They understood our vision perfectly and executed it better than we imagined.",
   },
   {
     name: "Jessica Lee",
@@ -34,14 +34,14 @@ export default function Testimonials() {
       <div className="container mx-auto px-6 relative z-10 mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Client Stories</h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Don&apos;t just take my word for it. Here&apos;s what people are saying.
+            Don&apos;t just take our word for it. Here&apos;s what people are saying.
           </p>
       </div>
         
       <div className="relative w-full overflow-hidden">
         {/* Gradient Masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10" />
 
         <div className="flex gap-8 w-max animate-marquee">
           {[...testimonials, ...testimonials].map((item, index) => (

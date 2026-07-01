@@ -59,7 +59,7 @@ export default function Process() {
     <section id="process" ref={containerRef} className="relative h-screen overflow-hidden bg-black">
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full pl-20">
         <div className="mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">How I Work</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">How We Work</h2>
           <p className="text-gray-400 max-w-xl text-lg">
             A transparent, collaborative process designed to deliver exceptional results.
           </p>

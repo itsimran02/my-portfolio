@@ -10,13 +10,15 @@ export default function About() {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    gsap.from(".bento-item", {
+    gsap.set(".bento-item", { y: 50, opacity: 0 });
+
+    gsap.to(".bento-item", {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 80%",
       },
-      y: 50,
-      opacity: 0,
+      y: 0,
+      opacity: 1,
       duration: 1,
       stagger: 0.1,
       ease: "power3.out",

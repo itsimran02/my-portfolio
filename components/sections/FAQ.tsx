@@ -8,31 +8,31 @@ import { Plus } from "lucide-react";
 const faqs = [
   {
     question: "What is your typical project timeline?",
-    answer: "Timelines vary by project scope. A simple landing page might take 1-2 weeks, while a full-stack web application could take 4-8 weeks. I provide a detailed timeline during our initial consultation.",
+    answer: "Timelines vary by project scope. A simple landing page might take 1-2 weeks, while a full-stack web application could take 4-8 weeks. We provide a detailed timeline during our initial consultation.",
   },
   {
     question: "Do you work with early-stage startups?",
-    answer: "Yes, I specialize in helping startups go from zero to one. I can assist with MVP development, technical architecture, and scaling strategies to get your product to market quickly.",
+    answer: "Yes, we specialize in helping startups go from zero to one. We can assist with MVP development, technical architecture, and scaling strategies to get your product to market quickly.",
   },
   {
     question: "What are your payment terms?",
-    answer: "Typically, I work with a 50% deposit to start the project and the remaining 50% upon completion and launch. For larger, long-term projects, we can discuss milestone-based payments.",
+    answer: "Typically, we work with a 50% deposit to start the project and the remaining 50% upon completion and launch. For larger, long-term projects, we can discuss milestone-based payments.",
   },
   {
     question: "Can you audit my existing codebase?",
-    answer: "Absolutely. I can perform a comprehensive audit of your current codebase to identify performance bottlenecks, security vulnerabilities, and areas for refactoring or modernization.",
+    answer: "Absolutely. We can perform a comprehensive audit of your current codebase to identify performance bottlenecks, security vulnerabilities, and areas for refactoring or modernization.",
   },
   {
     question: "Do you provide ongoing support?",
-    answer: "Yes, I offer post-launch support packages to ensure your website remains secure, up-to-date, and performing optimally. We can discuss a plan that fits your needs.",
+    answer: "Yes, we offer post-launch support packages to ensure your website remains secure, up-to-date, and performing optimally. We can discuss a plan that fits your needs.",
   },
   {
     question: "What is your design process like?",
-    answer: "I start with a discovery phase to understand your brand and goals. Then, I move to wireframing and high-fidelity design. Once approved, I build the site using modern best practices.",
+    answer: "We start with a discovery phase to understand your brand and goals. Then, we move to wireframing and high-fidelity design. Once approved, we build the site using modern best practices.",
   },
   {
     question: "Can you help with SEO?",
-    answer: "Absolutely. I build all websites with SEO best practices in mind, including semantic HTML, fast load times, and mobile responsiveness. I can also help with metadata and content strategy.",
+    answer: "Absolutely. We build all websites with SEO best practices in mind, including semantic HTML, fast load times, and mobile responsiveness. We can also help with metadata and content strategy.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function FAQ() {
     <section id="faq" ref={containerRef} className="py-32 relative">
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Common Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Common Questions</h2>
           <p className="text-gray-400 max-w-xl text-xl">
             Everything you need to know about the process.
           </p>

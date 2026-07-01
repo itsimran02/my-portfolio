@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Talk.</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-lg">
-              Have a project in mind? I&apos;m always open to discussing new opportunities and ideas.
+              Have a project in mind? We&apos;re always open to discussing new opportunities and ideas.
             </p>
           </div>
           

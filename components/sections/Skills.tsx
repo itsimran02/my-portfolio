@@ -36,14 +36,16 @@ export default function Skills() {
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // Initial fade in
-    gsap.from(containerRef.current, {
+    // Set initial state
+    gsap.set(".skills-heading", { y: 30, opacity: 0 });
+
+    gsap.to(".skills-heading", {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 80%",
       },
-      y: 30,
-      opacity: 0,
+      y: 0,
+      opacity: 1,
       duration: 0.8,
       ease: "power3.out",
     });
@@ -68,20 +70,20 @@ export default function Skills() {
   }, { scope: containerRef });
 
   return (
-    <section id="skills" ref={containerRef} className="py-24 relative overflow-hidden">
+    <section id="skills" ref={containerRef} className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10 mb-12">
-        <div className="text-center">
+        <div className="skills-heading text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Tech Stack</h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            A curated set of powerful technologies I use to build scalable applications.
+            A curated set of powerful technologies we use to build scalable applications.
           </p>
         </div>
       </div>
 
       {/* Marquee Container */}
       <div className="relative w-full overflow-hidden py-8 bg-white/5 border-y border-white/10">
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10" />
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10" />
         
         <div ref={marqueeRef} className="flex gap-8 w-max">
           <div className="marquee-content flex gap-8">

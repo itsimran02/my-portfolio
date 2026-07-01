@@ -12,13 +12,15 @@ export default function Contact() {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    gsap.from(".contact-content", {
+    gsap.set(".contact-content", { y: 50, opacity: 0 });
+
+    gsap.to(".contact-content", {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 70%",
       },
-      y: 50,
-      opacity: 0,
+      y: 0,
+      opacity: 1,
       duration: 1,
       stagger: 0.2,
       ease: "power3.out",
@@ -40,7 +42,7 @@ export default function Contact() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">great together.</span>
             </h2>
             <p className="text-xl text-gray-400 mb-12 max-w-md leading-relaxed">
-              Ready to accelerate your digital presence? Whether you have a clear vision or just an idea, I&apos;m here to help you ship faster.
+              Ready to accelerate your digital presence? Whether you have a clear vision or just an idea, we&apos;re here to help you ship faster.
             </p>
 
             <div className="flex flex-col gap-8 mb-12">

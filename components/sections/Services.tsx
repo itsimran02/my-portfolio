@@ -41,13 +41,15 @@ export default function Services() {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    gsap.from(".service-card", {
+    gsap.set(".service-card", { y: 50, opacity: 0 });
+
+    gsap.to(".service-card", {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 80%",
       },
-      y: 50,
-      opacity: 0,
+      y: 0,
+      opacity: 1,
       duration: 1,
       stagger: 0.15,
       ease: "power3.out",
