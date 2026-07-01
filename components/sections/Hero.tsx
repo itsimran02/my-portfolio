@@ -58,8 +58,8 @@ export default function Hero() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl leading-relaxed">
-            Specializing in <span className="text-white font-semibold">MERN Stack</span> & <span className="text-white font-semibold">WordPress</span>.
-            I leverage AI tools to accelerate development, reducing costs and delivery times without compromising quality.
+            Specializing in <span className="text-white font-semibold">MERN Stack</span>, <span className="text-white font-semibold">WordPress</span> & <span className="text-white font-semibold">Shopify</span>.
+            We leverage AI tools to accelerate development, reducing costs and delivery times without compromising quality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6">

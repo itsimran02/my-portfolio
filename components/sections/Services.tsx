@@ -3,7 +3,7 @@
 import { useGSAP } from "@/lib/gsap";
 import { gsap } from "@/lib/gsap";
 import { useRef } from "react";
-import { ArrowUpRight, Layers, Globe, Terminal, Cpu } from "lucide-react";
+import { ArrowUpRight, Layers, Globe, Terminal, ShoppingBag } from "lucide-react";
 import SpotlightCard from "@/components/SpotlightCard";
 
 const services = [
@@ -30,9 +30,9 @@ const services = [
   },
   {
     id: "04",
-    title: "AI-Accelerated Workflow",
-    description: "Leveraging AI tools to speed up coding and testing, saving you time and budget.",
-    icon: Cpu,
+    title: "Shopify Development",
+    description: "Custom Shopify themes, headless storefronts, and e-commerce solutions that convert visitors into customers.",
+    icon: ShoppingBag,
     color: "rgba(236, 72, 153, 0.15)", // Pink glow
   },
 ];

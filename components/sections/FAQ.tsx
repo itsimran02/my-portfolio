@@ -41,13 +41,16 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useGSAP(() => {
-    gsap.from(".faq-item", {
+    // Set initial hidden state immediately to prevent flash
+    gsap.set(".faq-item", { y: 20, opacity: 0 });
+
+    gsap.to(".faq-item", {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 80%",
       },
-      y: 20,
-      opacity: 0,
+      y: 0,
+      opacity: 1,
       duration: 0.8,
       stagger: 0.1,
       ease: "power3.out",

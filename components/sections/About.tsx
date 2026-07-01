@@ -29,7 +29,7 @@ export default function About() {
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             More than just code. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">I build digital assets.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">We build digital assets.</span>
           </h2>
         </div>
 
@@ -39,10 +39,10 @@ export default function About() {
             className="md:col-span-2 p-8 transition-all duration-300 hover:-translate-y-1"
             spotlightColor="rgba(255, 255, 255, 0.08)"
           >
-            <h3 className="text-2xl font-bold mb-4 text-white">The Developer</h3>
+            <h3 className="text-2xl font-bold mb-4 text-white">The Team</h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              I&apos;m a Full Stack Developer with a passion for building beautiful, functional, and scalable web applications. 
-              My journey started with a curiosity for how things work, and it has evolved into a career of crafting digital experiences.
+              We&apos;re a two-person team with a passion for building beautiful, functional, and scalable web applications &amp; e-commerce stores. 
+              From full stack platforms to Shopify storefronts — we cover the entire digital spectrum.
             </p>
           </SpotlightCard>
 
@@ -64,7 +64,7 @@ export default function About() {
               <Cpu size={24} />
             </div>
             <h3 className="text-xl font-bold mb-2 text-white">Tech Stack</h3>
-            <p className="text-gray-400">WordPress & Next.js Specialist</p>
+            <p className="text-gray-400">Next.js, WordPress & Shopify</p>
           </SpotlightCard>
 
           {/* Performance Card */}
